@@ -15,44 +15,45 @@ console.log(nameInput, kmInput, ageInput);
 
 const button = document.querySelector(".invio");
 
-button.addEventListener('click',
-    function(){
-        let nameValue = nameInput.value;
-        let kmValue = parseInt(kmInput.value);
-        let ageValue = ageInput.value;
+//funzione che rielabora i dati inserire
 
-        //calcolare il prezzo in base al numero di chilometri
-        let totPrice = 0.21 * kmValue;
-        let scontoMin = (totPrice * 0.20);//prezzo al -20%
-        let scontoOver = (totPrice * 0.40);//prezzo al -40%
-        console.log(nameValue, kmValue, ageValue, totPrice);
-        console.log(scontoMin, scontoOver);
+function ticket() {
+    let nameValue = nameInput.value;
+    let kmValue = parseInt(kmInput.value);
+    let ageValue = ageInput.value;
 
-        //applicare sconti in base all'età
-        if(ageValue === 'minorenne'){
-            totPrice;
-            scontoMin;
-            let yourTicket = totPrice - scontoMin;
-            price = yourTicket;
-            console.log(price);
-        }else if(ageValue === 'over65'){
-            totPrice;
-            scontoOver;
-            let yourTicket = totPrice - scontoOver;
-            price = yourTicket;
-            console.log(price);
-        }else{
-            let totPrice = 0.21 * parseInt(kmInput.value);
-            price = totPrice;
-            console.log(price);
-        }
+    //calcolare il prezzo in base al numero di chilometri
+    let totPrice = 0.21 * kmValue;
+    let scontoMin = (totPrice * 0.20);//prezzo al -20%
+    let scontoOver = (totPrice * 0.40);//prezzo al -40%
+    console.log(nameValue, kmValue, ageValue, totPrice);
+    console.log(scontoMin, scontoOver);
 
-        document.getElementById("ticket").innerHTML = price.toFixed(2);
-        document.getElementById("name").innerHTML = nameValue;
-
-
+    //applicare sconti in base all'età
+    if (ageValue === 'minorenne') {
+        totPrice;
+        scontoMin;
+        let yourTicket = totPrice - scontoMin;
+        price = yourTicket;
+        console.log(price);
+    } else if (ageValue === 'over65') {
+        totPrice;
+        scontoOver;
+        let yourTicket = totPrice - scontoOver;
+        price = yourTicket;
+        console.log(price);
+    } else {
+        let totPrice = 0.21 * parseInt(kmInput.value);
+        price = totPrice;
+        console.log(price);
     }
-)
+    //generare l'output del biglietto
 
+    let code = Math.floor(1000 + Math.random()*9000);
 
-//generare un output
+    document.getElementById("cp").innerHTML = code;
+    document.getElementById("ticket").innerHTML = price.toFixed(2) + " euro";
+    document.getElementById("name").innerHTML = nameValue;
+}
+
+button.addEventListener('click', ticket);

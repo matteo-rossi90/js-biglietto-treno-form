@@ -10,40 +10,90 @@
 </head>
 <body>
 
-    <div id="container">
+    <div class="container">
+
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
         <!-- form per l'inserimento dei dati da parte dell'utente -->
-        <form action="#">
 
-            <label>Nome</label>
-            <input type="text" id="input-name" placeholder="Inserisci il tuo nome">
+        <div id="box-form">
+
+            <form action="#">
+                
+                <div class="col-form">
+                    <label>Nome e cognome</label><br>
+                    <input type="text" id="input-name" placeholder="Inserisci nome e cognome">
+                </div>
+                
+                <div class="col-form">
+                    <label>Km da percorrere</label><br>
+                    <input type="text" id="input-km" placeholder="Inserisci il numero di km">
+                </div>
+                
+                <div class="col-form">
+                    <label>Fascia d'età</label><br>
+                    <select name="age" id="ageBox" class="input-age">
+                        <option value="maggiorenne">
+                            Maggiorenne
+                        </option>
+                        <option value="minorenne">
+                            Minorenne
+                        </option>
+                        <option value="over65">
+                            Al di sopra di 65 anni
+                        </option>
+                    </select><br>
+
+                </div>
             
-            <label>Distanza da percorrere</label>
-            <input type="text" id="input-km" placeholder="Inserisci il numero di km">
+                <!-- <h2 id="name">Nome</h2> -->
             
-            <label>Fascia d'età</label>
-            <select name="age" id="ageBox" class="input-age">
-                <option value="maggiorenne">
-                    Maggiorenne
-                </option>
-                <option value="minorenne">
-                    Minorenne
-                </option>
-                <option value="over65">
-                    Al di sopra di 65 anni
-                </option>
-            </select><br>
+                <!-- <h2 id="ticket">Prezzo biglietto</h2> -->
+            
+            
+            </form>
 
             <button class="invio">
                 <span>Genera</span>
-            </button><br>
+            </button>
+            <button>
+                <span>Annulla</span>
+            </button>
+        </div>  
+        
+        <h2>IL TUO BIGLIETTO</h2>
+        <div id="box-ticket">
 
-            <h2 id="name">Nome</h2>
+            <h3>DETTAGLIO PASSEGGERI </h3>
+            <!-- biglietto -->
 
-            <h2 id="ticket">Prezzo biglietto</h2>
-            
+            <div class="container">
 
-        </form>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Nome e cognome</th>
+                            <th>Carrozza</th>
+                            <th>Offerta</th>
+                            <th>Codice CP</th>
+                            <th>Costo biglietto</th>
+                        </tr>
+                        <tr>
+                            <td id="name"></td>
+                            <td>5</td>
+                            <td>Biglietto Standard</td>
+                            <td id="cp"></td>
+                            <td id="ticket"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+
+        
 
     </div>
     
