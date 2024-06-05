@@ -57,7 +57,7 @@ function ticket() {
 
     const addTable = document.getElementById("add-table");
 
-    addTable.innerHTML = "<h3>" + "DETTAGLI PASSEGGERI" + "</h3>" + "<table>" + "<tbody>" +
+    addTable.innerHTML += "<h3>" + "DETTAGLI PASSEGGERI" + "</h3>" + "<table>" + "<tbody>" +
         + "<tr>" + "<th>" + "Nome e cognome" + "</th>" + "<th>" + "Carrozza" + "</th>" + "<th>" + "Offerta" + "</th>" + "<th>" + "Codice" + "</th>" + "<th>" + "Costo biglietto" + "</th>" + "</tr>" +
         + "<tr>" + "<td>" + nameValue + "</td>" + "<td>" + "5" + "</td>" + "<td>" + code + "</td>" + "<td>" + "Standard" + "</td>" + "<td>" + price.toFixed(2) + " euro" + "</td>" + "</tr>" +
         + "</tbody>" + "</table>";
