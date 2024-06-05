@@ -55,6 +55,11 @@ function ticket() {
     document.getElementById("ticket").innerHTML = price.toFixed(2) + " euro";
     document.getElementById("name").innerHTML = nameValue;
 
+    // document.getElementById("add-table").innerHTML += "<h3>" + "DETTAGLI PASSEGGERI" + "</h3>" + "<table>" + "<tbody>" +
+    // + "<tr>" + "<th>" + "Nome e cognome" + "</th>" + "<th>" + "Carrozza" + "</th>" + "<th>" + "Offerta" + "</th>" + "<th>" + "Codice" + "</th>" + "<th>" + "Costo biglietto" + "</th>" + "</tr>" +
+    // + "<tr>" + "<td>" + nameValue + "</td>" + "<td>" + "5" + "</td>" + "<td>" + code + "</td>" + "<td>" + "Standard" + "</td>" + "<td>" + price.toFixed(2) + " euro" + "</td>" + "</tr>" +
+    // + "</tbody>" + "</table>";
+
 }
 
 button.addEventListener('click', ticket);
