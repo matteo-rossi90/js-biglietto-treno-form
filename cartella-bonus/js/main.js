@@ -7,15 +7,15 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 // fare in modo che il nome, i chilometri da percorrere e 
 //l'età del passeggero nel form vengano salvati
 
-const nameInput = document.querySelector("#input-name");
-const kmInput = document.querySelector("#input-km");
-const ageInput = document.querySelector("#ageBox");
+const nameInput = document.querySelector(".input-name");
+const kmInput = document.querySelector(".input-km");
+const ageInput = document.querySelector(".input-age");
 
-console.log(nameInput, kmInput, ageInput);
+// console.log(nameInput, kmInput, ageInput);
 
-const button = document.querySelector(".invio");
+const AddButton = document.querySelector(".invio");
 
-//funzione che rielabora i dati inserire
+//funzione che rielabora i dati da inserire e genera il riepilogo dati al click
 
 function ticket() {
     let nameValue = nameInput.value;
@@ -51,15 +51,17 @@ function ticket() {
 
     let code = Math.floor(1000 + Math.random()*9000);
 
-    document.getElementById("cp").innerHTML = code;
-    document.getElementById("ticket").innerHTML = price.toFixed(2) + " euro";
-    document.getElementById("name").innerHTML = nameValue;
+    // document.getElementById("cp").innerHTML = code;
+    // document.getElementById("ticket").innerHTML = price.toFixed(2) + " euro";
+    // document.getElementById("name").innerHTML = nameValue;
 
-    // document.getElementById("add-table").innerHTML += "<h3>" + "DETTAGLI PASSEGGERI" + "</h3>" + "<table>" + "<tbody>" +
-    // + "<tr>" + "<th>" + "Nome e cognome" + "</th>" + "<th>" + "Carrozza" + "</th>" + "<th>" + "Offerta" + "</th>" + "<th>" + "Codice" + "</th>" + "<th>" + "Costo biglietto" + "</th>" + "</tr>" +
-    // + "<tr>" + "<td>" + nameValue + "</td>" + "<td>" + "5" + "</td>" + "<td>" + code + "</td>" + "<td>" + "Standard" + "</td>" + "<td>" + price.toFixed(2) + " euro" + "</td>" + "</tr>" +
-    // + "</tbody>" + "</table>";
+    const addTable = document.getElementById("add-table");
+
+    addTable.innerHTML = "<h3>" + "DETTAGLI PASSEGGERI" + "</h3>" + "<table>" + "<tbody>" +
+        + "<tr>" + "<th>" + "Nome e cognome" + "</th>" + "<th>" + "Carrozza" + "</th>" + "<th>" + "Offerta" + "</th>" + "<th>" + "Codice" + "</th>" + "<th>" + "Costo biglietto" + "</th>" + "</tr>" +
+        + "<tr>" + "<td>" + nameValue + "</td>" + "<td>" + "5" + "</td>" + "<td>" + code + "</td>" + "<td>" + "Standard" + "</td>" + "<td>" + price.toFixed(2) + " euro" + "</td>" + "</tr>" +
+        + "</tbody>" + "</table>";
 
 }
 
-button.addEventListener('click', ticket);
+AddButton.addEventListener('click', ticket);

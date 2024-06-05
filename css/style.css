@@ -52,6 +52,21 @@ form{
     justify-content: space-around;
 }
 
+button{
+    padding: 8px 16px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.invio{
+    background-color:#B91450;
+}
+
+.cancella{
+    background-color: grey;
+}
 
 table{
     text-align: left;
