@@ -15,8 +15,32 @@
         <!-- form per l'inserimento dei dati da parte dell'utente -->
         <form action="#">
 
-            <label for="">Nome</label>
-            <input type="text" placeholder="Inserisci il tuo nome">
+            <label>Nome</label>
+            <input type="text" id="input-name" placeholder="Inserisci il tuo nome">
+            
+            <label>Distanza da percorrere</label>
+            <input type="text" id="input-km" placeholder="Inserisci il numero di km">
+            
+            <label>Fascia d'età</label>
+            <select name="age" id="ageBox" class="input-age">
+                <option value="maggiorenne">
+                    Maggiorenne
+                </option>
+                <option value="minorenne">
+                    Minorenne
+                </option>
+                <option value="over65">
+                    Al di sopra di 65 anni
+                </option>
+            </select><br>
+
+            <button class="invio">
+                <span>Genera</span>
+            </button><br>
+
+            <h2 id="name">Nome</h2>
+
+            <h2 id="ticket">Prezzo biglietto</h2>
             
 
         </form>
